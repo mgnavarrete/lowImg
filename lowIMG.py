@@ -41,16 +41,6 @@ CVAT_PASSWORD = os.getenv('CVAT_PASSWORD')
 # Conectar a CVAT
 client = connect_to_cvat(CVAT_HOST, CVAT_USERNAME, CVAT_PASSWORD)
 
-if proceso == 'new_task':
-    print("Proceso por implementar")
-    print("Crear en el servidor de cvat el task con el nombre:",task_name)
-    print("Selecciona cloud storage y la carpeta correspondiente a la medición")
-    print("Corre la anotación automática y corrige las anotaciones erroneas")
-    print("Vuelve a correr este programa pero con el siguiente comando:")
-    print("")
-    print(f"python3 main.py get_data {task_name}")
-    print("")
-    print("Para más consultas hablar con el administrador del sistema.")
 if proceso == 'get_img':
     
     # Buscar la tarea
