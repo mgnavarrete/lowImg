@@ -1,0 +1,6 @@
+# Ignorar archivos sensibles
+.env
+# Ignorar archivos temporales o generados por el sistema
+*.pyc
+__pycache__
+.DS_Store
