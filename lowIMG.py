@@ -1,15 +1,10 @@
 import os
-from tkinter import filedialog
 from utils.functions import *
-from utils.getAntena import getAntenaIDS
-from time import sleep
 from tqdm import tqdm
 import boto3
 from botocore.exceptions import NoCredentialsError
 import argparse
-import json
 from dotenv import load_dotenv
-import shutil
 import cv2
 
 # Crea un objeto ArgumentParser para definir argumentos y opciones para tu script
