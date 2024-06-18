@@ -4,3 +4,8 @@
 *.pyc
 __pycache__
 .DS_Store
+
+#Ignorar toda .zip y .jpg .png 
+*.zip
+*.jpg
+*.png
