@@ -1,0 +1,7 @@
+cvat_sdk
+boto3
+tqdm
+opencv-python
+python-dotenv
+argparse
+botocore
