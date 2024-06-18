@@ -6,6 +6,7 @@ from botocore.exceptions import NoCredentialsError
 import argparse
 from dotenv import load_dotenv
 import cv2
+import zipfile
 
 # Crea un objeto ArgumentParser para definir argumentos y opciones para tu script
 parser = argparse.ArgumentParser(description='Ejecutar script con un argumento de línea de comandos')
@@ -46,7 +47,10 @@ if proceso == 'get_img':
 
     # Correr unzip para descomprimir el archivo y que no haga print de lo que hace
     print(f"Descomprimiendo el archivo {task_name}.zip...")
-    os.system(f'unzip {task_name}.zip -d {task_name} > /dev/null')
+    # os.system(f'unzip {task_name}.zip -d {task_name} > /dev/null')
+    with zipfile.ZipFile(f'{task_name}.zip', 'r') as zip_ref:
+        zip_ref.extractall(task_name)
+    
     print("Archivo descomprimido!")
 
     levID = task_name.split('-')[0]
